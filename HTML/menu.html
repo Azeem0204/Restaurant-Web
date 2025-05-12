@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Indian Dishes</title>
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="shortcut icon" href="../IMAGES/favicon.png" type="image/x-icon">
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0; /* Remove all default body margins */
+    padding: 0; /* Remove padding from body */
+    padding-top: 0; /* Ensure no top padding to avoid space above navbar */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 0; /* Ensure there's no margin above the header */
+    z-index: 999;
+}
+
+.navbar {
+    background-color: #444;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Keeps navbar at the top of the page */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0; /* Remove any margin around navbar */
+}
+
+.navbar a {
+    display: inline-block;
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar a.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+    /* margin-top: 80px; */
+}
+
+.menu-card {
+    background-color: rgb(223, 209, 209);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    
+    /* height: 450px; */
+    /* width: 00px; */
+}
+
+.menu-card:hover {
+    transform: scale(1.05);
+}
+
+.menu-card img {
+    width: 90%;
+    height: 60%;
+    border-radius: 8px;
+}
+
+.menu-card h4 {
+    margin-top: 10px;
+}
+
+.menu-card p {
+    color: #333;
+    font-size: 14px;
+}
+
+.menu-card a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.add-to-cart {
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+footer h5 {
+    margin: 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 5px 0;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+.Home{
+    width: 60px;
+    height: 30px;
+    margin: 5px;
+    background-color: cyan;
+    border-radius: 8px;
+}
+.head{
+    margin-top: 30px;
+    text-align: center;
+    border: 2px solid black;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: cyan;
+    text-shadow: 4px 4px 6px red;
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Menu</h1>
+</header>
+
+<!-- <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="menu.html" class="active">Menu</a>
+    <a href="profile.html">My Profile</a>
+    <a href="orders.html">My Orders</a>
+    <a href="contact.html">Contact</a>
+</div> -->
+
+<a href="../HTML/index.html"><button type="submit" class="Home">Home</button></a>
+
+
+<!-- Starter -->
+<div class="head"><h1>Starter Items</h1></div>
+<div class="menu-container">
+    <!-- Biryani Card -->
+    <div class="menu-card">
+        <img src="../IMAGES/chicken-tikka.jpg" alt="chicken-tikka">
+        <h4>chicken-Tikka</h4>
+        <p>Tender chicken marinated in a blend of yogurt and spices, grilled to perfection for a smoky, flavorful dish.</p>
+        <h4 style="color: #007bff; margin: 10px 0;">Price: ₹220</h4>
+        <a href="../">View Details</a>
+        <form action="cart.html" method="POST">
+            <input type="hidden" name="dish" value="Biryani">
+            <button type="submit" class="add-to-cart">Add to Cart</button>
+        </form>
+    </div>
+
+    <!-- Butter Chicken Card -->
+    <div class="menu-card">
+        <img src="../IMAGES/Tandoori Chicken.jpg" alt="Butter Chicken">
+        <h4>Tandoori Chicken</h4>
+        <p>Marinated in a rich blend of yogurt, spices, and herbs, then cooked in a traditional tandoor for a smoky, juicy flavor.</p>
+        <h4 style="color: #007bff; margin: 10px 0;">Price: ₹350</h4>
+        <a href="#">View Details</a>
+        <form action="cart.html" method="POST">
+            <input type="hidden" name="dish" value="Butter Chicken">
+            <button type="submit" class="add-to-cart">Add to Cart</button>
+        </form>
+    </div>
+
+    <!-- Paneer Tikka Card -->
+    <div class="menu-card">
+        <img src="../IMAGES/paneer-tikka.jpg" alt="Paneer Tikka">
+        <h4>Paneer Tikka</h4>
+        <p>Grilled chunks of cottage cheese marinated in flavorful spices.</p>
+        <h4 style="color: #007bff; margin: 10px 0;">Price: ₹250</h4>
+        <a href="#">View Details</a>
+        <form action="cart.html" method="POST">
+            <input type="hidden" name="dish" value="Paneer Tikka">
+            <button type="submit" class="add-to-cart">Add to Cart</button>
+        </form>
+    </div>
+
+    <div class="menu-card">
+        <img src="../IMAGES/veg-seekh.png" alt="veg-seekh">
+        <h4>Veg-Seekh</h4>
+        <p>A delicious mix of finely chopped vegetables and aromatic spices, shaped onto skewers and grilled to a perfect golden brown.</p>
+        <h4 style="color: #007bff; margin: 10px 0;">Price: ₹150</h4>
+        <a href="#">View Details</a>
+        <form action="cart.html" method="POST">
+            <input type="hidden" name="dish" value="Biryani">
+            <button type="submit" class="add-to-cart">Add to Cart</button>
+        </form>
+    </div>
+
+    <!-- Butter Chicken Card  -->
+    <div class="menu-card">
+        <img src="../IMAGES/Spring-Rolls.jpg" alt="Spring-Rolls">
+        <h4>Spring Rolls</h4>
+        <p>A delicious mix of finely chopped vegetables and aromatic spices, shaped onto skewers and grilled to a perfect golden brown.</p>
+        <h4 style="color: #007bff; margin: 10px 0;">Price: ₹140</h4>
+        <a href="#">View Details</a>
+        <form action="cart.html" method="POST">
+            <input type="hidden" name="dish" value="Butter Chicken">
+            <button type="submit" class="add-to-cart">Add to Cart</button>
+        </form>
+    </div>
+
+    <!-- Paneer Tikka Card  -->
+    <div class="menu-card">
+        <img src="../IMAGES/Chicken-Samosa.jpg" alt="Chicken-Samosa">
+        <h4>Chicken Samosa</h4>
+        <p>Crispy, triangular pastry filled with spiced minced chicken, offering a flavorful crunch in every bite.</p>
+        <h4 style="color: #007bff; margin: 10px 0;">Price: ₹120</h4>
+        <a href="#">View Details</a>
+        <form action="cart.html" method="POST">
+            <input type="hidden" name="dish" value="Paneer Tikka">
+            <button type="submit" class="add-to-cart">Add to Cart</button>
+        </form>
+    </div>
+    <!-- More menu items... -->
+</div>
+
+
+<!-- Main Course -->
+<div class="head"><h1>Main Course</h1></div>
+<div class="menu-container">
+
+    <!-- Biryani Card -->
+    <div class="menu-card">
+        <img src="../IMAGES/Chicken-biryani.jpg" alt="Biryani">
+        <h4>Biryani</h4>
+        <p>A fragrant rice dish with spices, meat, and sometimes vegetables.</p>
+        <h4 style="color: #007bff; margin: 10px 0;">Price: ₹320</h4>
+        <a href="../">View Details</a>
+        <form action="cart.html" method="POST">
+            <input type="hidden" name="dish" value="Biryani">
+            <button type="submit" class="add-to-cart">Add to Cart</button>
+        </form>
+    </div>
+
+    <!-- Butter Chicken Card -->
+    <div class="menu-card">
+        <img src="../IMAGES/Butter Chicken.jpg" alt="Butter Chicken">
+        <h4>Butter Chicken</h4>
+        <p>A rich and creamy curry made with tender chicken pieces.</p>
+        <h4 style="color: #007bff; margin: 10px 0;">Price: ₹260</h4>
+        <a href="#">View Details</a>
+        <form action="cart.html" method="POST">
+            <input type="hidden" name="dish" value="Butter Chicken">
+            <button type="submit" class="add-to-cart">Add to Cart</button>
+        </form>
+    </div>
+
+    <!-- Paneer Tikka Card -->
+    <div class="menu-card">
+        <img src="../IMAGES/Paneer Biryani.jpg" alt="Paneer Biryani">
+        <h4>Paneer Biryani</h4>
+        <p>Fragrant basmati rice layered with spiced paneer, delivering a rich and flavorful vegetarian delight.</p>
+        <h4 style="color: #007bff; margin: 10px 0;">Price: ₹280</h4>
+        <a href="#">View Details</a>
+        <form action="cart.html" method="POST">
+            <input type="hidden" name="dish" value="Paneer Tikka">
+            <button type="submit" class="add-to-cart">Add to Cart</button>
+        </form>
+    </div>
+
+    <div class="menu-card">
+        <img src="../IMAGES/pala-paneer.png" alt="Palak-Paneer">
+        <h4>Palak Paneer</h4>
+        <p>Fresh spinach cooked with soft paneer cubes in a mildly spiced, creamy gravy for a wholesome delight.</p>
+        <h4 style="color: #007bff; margin: 10px 0;">Price: ₹220</h4>
+        <a href="#">View Details</a>
+        <form action="cart.html" method="POST">
+            <input type="hidden" name="dish" value="Biryani">
+            <button type="submit" class="add-to-cart">Add to Cart</button>
+        </form>
+    </div>
+
+    <!-- Butter Chicken Card  -->
+    <div class="menu-card">
+        <img src="../IMAGES/Chicken Changezi.jpg" alt="Chicken Changezi">
+        <h4>Chicken Changezi</h4>
+        <p>A tender chicken dish cooked in a spicy, tangy gravy with a unique blend of aromatic spices and yogurt.</p>
+        <h4 style="color: #007bff; margin: 10px 0;">Price: ₹250</h4>
+        <a href="#">View Details</a>
+        <form action="cart.html" method="POST">
+            <input type="hidden" name="dish" value="Butter Chicken">
+            <button type="submit" class="add-to-cart">Add to Cart</button>
+        </form>
+    </div>
+
+    <!-- Paneer Tikka Card  -->
+    <div class="menu-card">
+        <img src="../IMAGES/Malai Kofta.jpg" alt="Malai Kofta">
+        <h4>Malai Kofta</h4>
+        <p>Soft, creamy dumplings made from vegetables and paneer, served in a rich, flavorful tomato-based gravy.</p>
+        <h4 style="color: #007bff; margin: 10px 0;">Price: ₹280</h4>
+        <a href="#">View Details</a>
+        <form action="cart.html" method="POST">
+            <input type="hidden" name="dish" value="Paneer Tikka">
+            <button type="submit" class="add-to-cart">Add to Cart</button>
+        </form>
+    </div>
+</div>
+
+
+<!-- Desserts -->
+<div class="head"><h1>Desserts Items</h1></div>
+<div class="menu-container">
+
+    <!-- Biryani Card -->
+    <div class="menu-card">
+        <img src="../IMAGES/Gulab Jamun.jpg" alt="Gulab Jamun">
+        <h4>Gulab Jamun</h4>
+        <p>Soft, deep-fried milk-based dumplings soaked in aromatic sugar syrup, offering a sweet, indulgent treat.</p>
+        <h4 style="color: #007bff; margin: 10px 0;">Price: ₹80</h4>
+        <a href="../">View Details</a>
+        <form action="cart.html" method="POST">
+            <input type="hidden" name="dish" value="Biryani">
+            <button type="submit" class="add-to-cart">Add to Cart</button>
+        </form>
+    </div>
+
+    <!-- Butter Chicken Card -->
+    <div class="menu-card">
+        <img src="../IMAGES/Puding.jpg" alt="Pudding">
+        <h4>Pudding</h4>
+        <p>A velvety, sweet dessert made from milk and sugar, often flavored with vanilla or chocolate and served chilled.</p>
+        <h4 style="color: #007bff; margin: 10px 0;">Price: ₹110</h4>
+        <a href="#">View Details</a>
+        <form action="cart.html" method="POST">
+            <input type="hidden" name="dish" value="Butter Chicken">
+            <button type="submit" class="add-to-cart">Add to Cart</button>
+        </form>
+    </div>
+
+    <!-- Paneer Tikka Card -->
+    <div class="menu-card">
+        <img src="../IMAGES/Kulfi.jpg" alt="Kulfi">
+        <h4>Kulfi</h4>
+        <p>A rich, creamy Indian frozen dessert made from reduced milk, infused with cardamom, saffron, or pistachios.</p>
+        <h4 style="color: #007bff; margin: 10px 0;">Price: ₹60</h4>
+        <a href="#">View Details</a>
+        <form action="cart.html" method="POST">
+            <input type="hidden" name="dish" value="Paneer Tikka">
+            <button type="submit" class="add-to-cart">Add to Cart</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div>
+            <h5>Foodies</h5>
+            <p>Your go-to place for delicious food and amazing service.</p>
+        </div>
+
+        <div>
+            <h5>Links</h5>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="orders.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="Booking.html">Book Table</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h5>Support</h5>
+            <ul>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Support Center</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h5>Contact</h5>
+            <p>Email: support@foodies.com</p>
+            <p>Phone: +91 98765 43210</p>
+        </div>
+    </div>
+
+    <div class="text-center">
+</footer>
